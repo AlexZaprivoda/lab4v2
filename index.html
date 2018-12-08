@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="test">
+      <input type="checkbox" id="test" />
+      <div></div>
+      <div></div>
+      <div class="clear"></div>
+    </label>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      label {
+        background-color: lightgray;
+        height: 20px;
+        border-radius: 45px;
+        display: inline-block;
+        width: 40px;
+        font-size: 0px;
+      }
+      label > [type="checkbox"] {
+        display: none;
+      }
+      label > div {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+      input + div {
+        background-color: green;
+      }
+      div + div {
+        visibility: hidden;
+        background-color: red;
+      }
+      input:checked + div {
+        visibility: hidden;
+      }
+      input:checked + div + div {
+        visibility: visible;
+      }
+    </style>
+  </body>
+</html>
